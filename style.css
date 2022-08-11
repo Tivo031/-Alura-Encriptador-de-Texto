@@ -1,0 +1,42 @@
+#logo{
+	 position: absolute;
+	 margin-top: 5%;
+	 margin-left: 8%;
+}
+
+button{
+	border-radius: 10px;
+	width: 200px;
+	height: 50px;
+	border-color: skyblue;
+}
+#btnEncriptar {
+	background-color: #0A3871;
+	color: #ffff;
+}
+
+#divBotones{
+  	position: absolute;
+  	top: 80%;
+  	left: 25%;
+}
+
+#divMostrar{
+	position: absolute;
+	top: 10%;
+	left: 50%;
+}
+#divIngreso{
+	position: absolute;
+	top: 10%;
+	left: 20%;	
+}
+#taMostrar{
+	resize: none;
+	border-radius: 10px;
+}
+
+#iEntrada{
+	resize: none;
+	border-radius: 10px;
+}
