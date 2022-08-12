@@ -15,7 +15,7 @@
 	<img id="logo" src="img/Vector.png">
 	<div id="divIngreso">
 		<!--Text Area para ingresar el texto a Encriptar/Desencriptar-->
-		<textarea id="iEntrada" rows="30" cols="40" placeholder="Ingresa tu texto aqui..."></textarea>
+		<textarea id="iEntrada" rows="30" cols="40" placeholder="Ingresa tu texto aqui..." pattern="[a-z]"></textarea>
 		<!--<textarea id="iEntrada" rows="30" cols="40" placeholder="INGRESE SUS TEXTO AQUI"> </textarea>
 		<input type="text" name="entrada" id="iEntrada">-->
 		<img src="img/arow.png" width="125" height="125">
@@ -24,6 +24,11 @@
 	<div id="divMostrar">
 		<!--Text Area para Mostrar el texto Encriptado/Desencriptado-->
 		<textarea id="taMostrar" rows="30" cols="40" disabled> </textarea>
+	</div>
+	
+	<div id="letrero">
+		<img src="img/signo.png">
+		<img src="img/letrasMin.png">
 	</div>
 	
 	<div id="divBotones">
@@ -112,5 +117,6 @@
 	var btnCopiar = document.getElementById("btnCopiar");
 	btnCopiar.onclick = copiar;
 </script>
+<footer id="piePagina">© Steven Jimenez - Alura LATAM</footer>
 
 </html>
