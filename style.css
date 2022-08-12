@@ -3,6 +3,16 @@
 	 margin-top: 5%;
 	 margin-left: 8%;
 }
+#letrero{
+	position: absolute;
+	top: 80%;
+	left: 25%;
+}
+#piePagina{
+	position: absolute;
+	top: 95%;
+	left: 35%;
+}
 
 button{
 	border-radius: 10px;
@@ -17,7 +27,7 @@ button{
 
 #divBotones{
   	position: absolute;
-  	top: 80%;
+  	top: 85%;
   	left: 25%;
 }
 

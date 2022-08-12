@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>
+		Alura -- Encriptador de Texto
+	</title>
+</head>
+
+
+
+<body>
+	<img id="logo" src="img/Vector.png">
+	<div id="divIngreso">
+		<!--Text Area para ingresar el texto a Encriptar/Desencriptar-->
+		<textarea id="iEntrada" rows="30" cols="40" placeholder="Ingresa tu texto aqui..." pattern="[a-z]"></textarea>
+		<!--<textarea id="iEntrada" rows="30" cols="40" placeholder="INGRESE SUS TEXTO AQUI"> </textarea>
+		<input type="text" name="entrada" id="iEntrada">-->
+		<img src="img/arow.png" width="125" height="125">
+	</div>
+
+	<div id="divMostrar">
+		<!--Text Area para Mostrar el texto Encriptado/Desencriptado-->
+		<textarea id="taMostrar" rows="30" cols="40" disabled> </textarea>
+	</div>
+	
+	<div id="letrero">
+		<img src="img/signo.png">
+		<img src="img/letrasMin.png">
+	</div>
+	
+	<div id="divBotones">
+		<button id="btnEncriptar">ENCRIPTAR</button>
+		<button id="btnDes">DESENCRIPTAR</button>
+		<button id="btnCopiar">COPIAR</button>
+	
+	</div>
+	
+</body>
+
+<script>
+	//obtenemos la entrada del input
+	var input = document.getElementById("iEntrada");
+	//obtenemos lo que el text area tenga de texto
+	var textArea = document.getElementById("taMostrar");
+
+	function encriptar(){
+		var encriptar = input.value;
+		//encriptar = encriptar.toLowerCase(); 
+		var cadena ="";
+
+		//hola mundo
+		/*
+			encriptar[0] = h
+			encriptar[1] = o
+		*/
+
+		for (var i = 0; i < encriptar.length; i++) {
+			if (encriptar[i]=="a") {
+				cadena = cadena + "ai";
+			}else if (encriptar[i]=="e") {
+				cadena = cadena + "enter";
+			}else if (encriptar[i]=="i") {
+				cadena = cadena + "imes";
+			}else if (encriptar[i]=="o") {
+				cadena = cadena + "ober";
+			}else if (encriptar[i]=="u") {
+				cadena = cadena + "ufat";
+			}else{
+				cadena = cadena + encriptar[i] 
+			}
+		}
+		console.log(cadena);
+		textArea.value = cadena;
+		input.value="";
+	}
+
+	function desencriptar(){
+		var desencriptar = input.value;
+		//desencriptar = desencriptar.toLowerCase(); 
+		var cadena = desencriptar;
+
+		cadena= cadena.replaceAll("ai","a");
+		cadena= cadena.replaceAll("enter","e");
+		cadena= cadena.replaceAll("imes","i");
+		cadena= cadena.replaceAll("ober","o");
+		cadena= cadena.replaceAll("ufat","u");
+
+		textArea.value = cadena;
+		input.value="";
+		console.log(cadena);
+	}
+
+	function copiar(){
+		 // Obtenemos el texto del textarea
+ 		 var copyText = document.getElementById("taMostrar");
+
+		//Seleccionamos el text area
+		  copyText.select();
+
+		//se copia el texto
+		  navigator.clipboard.writeText(copyText.value);
+
+		//Alerta para identificar que el texto se copio correctametne.
+		  alert("Se copio el texto correctamente");
+
+	}
+	
+	var btnEncriptar = document.getElementById("btnEncriptar");
+	btnEncriptar.onclick = encriptar;
+
+	var btnDesencriptar = document.getElementById("btnDes");
+	btnDesencriptar.onclick = desencriptar;
+
+	var btnCopiar = document.getElementById("btnCopiar");
+	btnCopiar.onclick = copiar;
+</script>
+<footer id="piePagina">© Steven Jimenez - Alura LATAM</footer>
+
+</html>
